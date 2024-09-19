@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {%include 'myapp/common/common_css.html'%}
+    <style>
+        .nav-link{
+          color:rgb(147, 7, 65);
+          font-size: 20px;
+          font-family: 'times roman';
+        }
+        
+        .dropdown-item{
+          color: rgb(168, 49, 28);
+          font-size: 20px;
+          font-family: 'times roman';
+        }
+        a:hover{
+          color:rgb(49, 10, 68)!important
+        }
+        .navbar-brand{
+          color:bisque;
+        }
+        </style>
+</head>
+<body>
+  
+  
+  {% include 'myapp/common/commonheader.html'%}
+  {%if messages%}
+  {%for m in messages%}
+  <div class="alert alert-danger alert-dismissible fade show" role="alert">
+    <strong>{{m}}</strong> 
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+  {%endfor%}
+  {%endif%}
+
+  <form method="post" action="/feedback/">
+    {% csrf_token %}
+  
+  
+
+  <div class="col-5">
+    <!-- forms code start -->
+    
+        <div class="mb-3">
+            <label for="name" class="form-label">user name<i class="fas fa-cat"></i></label>
+            <input type="text" name="username" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text"></div>
+          </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">user email<i class="material-icons">&#xe7fe;</i></label>
+          <input type="email" name="useremail" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <div id="emailHelp" class="form-text"></div>
+        </div>
+        <div class="mb-3">
+          <label for="feedback" class="form-label">user feedback<i class="material-icons">&#xe7fe;</i></label>
+          <textarea name="userfeedback" placeholder="give your feedback" class="form-control"></textarea>
+        </div>
+    </li>
+    <li class="nav-item dropdown">
+      <a class="userdropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Dropdown
+      </a>
+      <ul class="dropdown-menu">
+        
+        <li><a class="dropdown-item" href="#">*</a></li>
+        <li><a class="dropdown-item" href="#">**</a></li>
+        <li><a class="dropdown-item" href="#">***</a></li>
+        <li><a class="dropdown-item" href="#">****</a></li>
+        <li><a class="dropdown-item" href="#">*****</a></li>
+        
+      </ul>
+    </li>
+       
+        <button type="submit" class="btn btn-primary">Submit</button>
+      
+    <!-- forms code ends -->
+    </div>
+    </form>
+{%include 'myapp/common/common_js.html'%}
+</body>
+</html>

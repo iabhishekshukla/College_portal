@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{%load static%}
+{% include 'myapp/common/student_commonheader.html'%} 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{%block title%}{%endblock%}</title>
+    <style>{%block style%}{%endblock%}</style>
+    {% include 'myapp/common/common_css.html'%}
+
+    
+
+</head>
+<body>
+{%block content%}{%endblock%}
+
+    <div class="row">
+        <div class="col-3"
+    <div style="text-align: center;">
+        
+        <img src="{% static 'myapp/images/abc.jpg'%}"class="rounded-circle w-50">
+    </div>
+    </div>
+</div>
+    <div class="col-3">
+        <div style="text-align: center;">
+            <h3>mukul pandey</h3>
+
+    
+    {%include 'myapp/common/commonfooter.html'%}
+{%include 'myapp/common/common_js.html'%}  
+</body>
+</html>

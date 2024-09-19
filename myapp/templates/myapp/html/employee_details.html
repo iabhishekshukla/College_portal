@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {%include 'myapp/common/common_css.html'%}
+</head>
+<body>
+    {%include 'myapp/common/commonheader.html'%}
+<!-- code start table -->
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">emp_name</th>
+        <th scope="col">emp_email</th>
+        <th scope="col">emp_phone</th>
+        <th scope="col">emp_designation</th>
+      </tr>
+    </thead>
+    <tbody>
+      {%for e in employee_key%}
+<tr>
+    <th>{{e.emp_name}}</th>
+    <th>{{e.emp_email}}</th>
+    <th>{{e.emp_phone}}</th>
+    <th>{{e.emp_designation}}</th>
+</tr>
+        {%endfor%}
+    </tbody>
+  </table>
+<!-- code ends table -->
+
+
+
+{%include 'myapp/common/common_js.html'%}
+</body>
+</html>

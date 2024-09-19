@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    {%load static%}
+   
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    {%include 'myapp/common/common_css.html'%}
+</head>
+<body>
+    <div class="container-fluid bg-info">
+        
+    </div>
+    {% include 'myapp/common/commonheader.html'%}
+    {%if messages%}
+    {%for m in messages%}
+    <!-- <h2>{{m}}</h2> -->
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>{{m}}</strong> 
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+       
+      </div>
+    {%endfor%}
+
+    {%endif%}
+    
+    <!-- forms code start -->
+    <form method="post" action="/login/">
+      {%csrf_token%}
+    
+        <div class="mb-3">
+            <label for="id" class="form-label">user id</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="userid">
+            <div id="emailHelp" class="form-text"></div>
+          </div>
+        <div class="mb-3">
+          <label for="pass" class="form-label">user pass</label>
+          <input type="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="userpass">
+          <div id="emailHelp" class="form-text"></div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+       
+    <!-- forms code ends -->
+    
+
+
+
+{%include 'myapp/common/common_js.html'%} 
+</body>
+</html>

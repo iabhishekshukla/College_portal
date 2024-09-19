@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {%include 'myapp/common/common_css.html'%}
+    
+</head>
+<body>
+  
+  
+  {% include 'myapp/common/student_commonheader.html'%}
+  {%if messages%}
+  {%for m in messages%}
+  <div class="alert alert-danger alert-dismissible fade show" role="alert">
+    <strong>{{m}}</strong> 
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+  {%endfor%}
+  {%endif%}
+
+  <form method="post" action="/student_feedback_rating/">
+    {% csrf_token %}
+  
+  
+
+  <div class="col-5">
+    <!-- forms code start -->
+    
+       
+        <div class="mb-3">
+          <label for="feedback" class="form-label">user feedback<i class="material-icons"></label>
+          <textarea name="userfeedback" placeholder="give your feedback" class="form-control"></textarea>
+        </div>
+    </li>
+    <select name="feedback_rating" class="form-select">
+
+<option value="def">Select Rating</option>
+
+<option value="one">*</option>
+<option value="two">**</option>
+<option value="three">***</option>
+<option value="four">****</option>
+<option value="five">*****</option>
+    </select>
+       
+        <button type="submit" class="btn btn-primary">Submit</button>
+      
+    <!-- forms code ends -->
+    </div>
+    </form>
+{%include 'myapp/common/common_js.html'%}
+</body>
+</html>
