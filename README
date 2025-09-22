@@ -1,0 +1,103 @@
+INTERNSHIP_HUB
+📌 Problem Statement
+
+Finding genuine internship opportunities has always been a major challenge for students:
+
+Students often struggle to identify authentic organizations that provide real internships.
+
+Due to fake listings and lack of transparency, many students end up making wrong choices.
+
+On the other hand, organizations also lack a simple and effective platform to showcase their internship opportunities.
+
+To address this issue, INTERNSHIP_HUB was developed.
+
+💡 Solution
+
+INTERNSHIP_HUB is a web-based platform that bridges the gap between students and organizations:
+
+Organizations can register themselves and post internship opportunities.
+
+Students can sign up, log in, and browse available internships.
+
+A secure authentication system ensures smooth access for both organizations and students.
+
+The platform is designed to be simple, transparent, and user-friendly.
+
+🚀 Features
+
+Organization registration & login
+
+Student registration & login
+
+Internship listings with details
+
+Students can browse and explore internships
+
+Secure authentication system
+
+Clean and user-friendly interface
+
+🛠️ Tech Stack
+
+Backend: Django
+
+Frontend: HTML, CSS, JavaScript (Django Templates)
+
+Database: SQLite (extendable to PostgreSQL/MySQL)
+
+Version Control: Git & GitHub
+
+📂 Project Structure
+INTERNSHIP_HUB/
+│-- internship_hub/       # Main project folder
+│-- accounts/             # User authentication (students & organizations)
+│-- internships/          # Internship-related models & views
+│-- templates/            # HTML Templates
+│-- static/               # CSS, JS, Images
+│-- db.sqlite3            # Database
+│-- manage.py             # Django project manager
+
+⚡ How to Run Locally
+
+Clone the repository
+
+git clone https://github.com/your-username/INTERNSHIP_HUB.git
+cd INTERNSHIP_HUB
+
+
+Create and activate a virtual environment
+
+python -m venv venv
+source venv/bin/activate   # For Linux/Mac
+venv\Scripts\activate      # For Windows
+
+
+Install dependencies
+
+pip install -r requirements.txt
+
+
+Run migrations
+
+python manage.py migrate
+
+
+Start the development server
+
+python manage.py runserver
+
+
+Open in your browser → http://127.0.0.1:8000/
+
+📸 Screenshots (Optional)
+
+Homepage
+
+Internship Listings Page
+
+Organization Dashboard
+
+🤝 Contributing
+
+Contributions are welcome!
+If you’d like to improve this project, feel free to fork the repo and submit a pull request.
